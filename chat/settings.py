@@ -22,7 +22,7 @@ PROJECT_ROOT = BASE_DIR
 # See https://docs.djangoproject.com/en/dev/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'ABC1234' #TODO Changeme
+SECRET_KEY = 'ABC1234'  # TODO Changeme
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -80,12 +80,8 @@ WSGI_APPLICATION = 'chat.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'chat',
-        'USER': 'root',
-        'PASSWORD': 'root',
-        'OPTIONS': {
-        }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR+'db.sqlite3',
     }
 }
 
@@ -186,3 +182,7 @@ CHANNEL_LAYERS = {
         },
     },
 }
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CSRF_TRUSTED_ORIGINS = ['https://jjnanthakumar-automatic-barnacle-qxp4p5567c44vp-8000.preview.app.github.dev']

@@ -39,3 +39,6 @@ nosetests.xml
 
 #VS Code
 .vscode
+
+venv
+run
